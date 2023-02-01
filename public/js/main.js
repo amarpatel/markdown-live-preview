@@ -44,12 +44,12 @@ $(function () {
     $("#output").html(sanitized);
   };
 
-  //leave
-  $(window).bind("beforeunload", function () {
-    if (isEdited) {
-      return "Are you sure you want to leave? Your changes will be lost.";
-    }
-  });
+  // Disable leave warning; saving to local storage
+  // $(window).bind("beforeunload", function () {
+  //   if (isEdited) {
+  //     return "Are you sure you want to leave? Your changes will be lost.";
+  //   }
+  // });
 
   convert();
   adjustScreen();
